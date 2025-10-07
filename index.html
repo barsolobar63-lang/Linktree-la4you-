@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JB SHOP | LinkTree</title>
+  <style>
+    /* Tampilan utama */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Loading Animation */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .loader {
+      border: 5px solid #222;
+      border-top: 5px solid #00ff88;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Konten utama */
+    .container {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #00ff88;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+      font-size: 0.95em;
+    }
+
+    /* Tombol link */
+    .links a {
+      display: block;
+      margin: 12px auto;
+      padding: 12px 25px;
+      width: 270px;
+      text-decoration: none;
+      background-color: #111;
+      border: 2px solid #00ff88;
+      color: #00ff88;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ff8840;
+    }
+
+    .links a:hover {
+      background-color: #00ff88;
+      color: black;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ff88;
+    }
+
+    /* Kontak JP */
+    .contact {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    .jp-link {
+      display: block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: #00ff88;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .jp-link:hover {
+      text-shadow: 0 0 8px #00ff88;
+      color: #fff;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading -->
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Isi Website -->
+  <div class="container">
+    <h1>🌙 JB SHOP</h1>
+    <p>Tempat Top Up, Nokos & Produk Digital Termurah 🔥</p>
+
+    <div class="links">
+      <a href="#">💎 Top Up Game</a>
+      <a href="#">📱 Nokos Murah</a>
+      <a href="#">🛍️ Produk Digital</a>
+      <a href="#">📦 Cek Pesanan</a>
+    </div>
+
+    <div class="contact">
+      <p>📲 Hubungi Admin:</p>
+      <a href="https://wa.me/6285864868243" target="_blank" class="jp-link">JP1: 0858-6486-8243</a>
+      <a href="https://wa.me/6283187704856" target="_blank" class="jp-link">JP2: 0831-8770-4856</a>
+    </div>
+  </div>
+
+  <footer>© 2025 JB SHOP | All Rights Reserved</footer>
+
+  <script>
+    // Hilangkan loading setelah halaman siap
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loading');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
